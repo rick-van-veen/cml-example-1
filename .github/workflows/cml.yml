@@ -16,6 +16,4 @@ jobs:
           python train.py  # generate plot.png
 
           # Create CML report
-          cat metrics.txt >> report.md
-          echo '![](./plot.png "Confusion Matrix")' >> report.md
-          cml comment create report.md
+          cml comment create --pr --publish metrics.txt
