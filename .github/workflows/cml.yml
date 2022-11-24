@@ -13,7 +13,6 @@ jobs:
           REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           pip install -r requirements.txt
-          python train.py  # generate plot.png
+          python train.py
 
-          # Create CML report
           cml comment create --pr --publish metrics.txt
